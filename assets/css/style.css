@@ -207,5 +207,19 @@ html,body{
 .btn:active,.btn.depressed{box-shadow:var(--bev-in2);padding:4px 9px 2px 11px;}
 .btn.active{box-shadow:var(--bev-in2);background:var(--panel-in);}
 
-
-
+.btn-transport{
+  background:var(--win-face);
+  box-shadow:var(--bev-out2);
+  border:none;
+  font-size:16px;font-weight:700;
+  color:var(--win-black);
+  cursor:pointer;
+  width:64px;height:44px;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  gap:2px;user-select:none;transition:none;
+  font-family:var(--font);
+}
+.btn-transport:hover{background:#ccc8c0;}
+.btn-transport:active{box-shadow:var(--bev-in2);padding-top:2px;padding-left:2px;}
+.btn-transport.playing{box-shadow:var(--bev-in2);background:var(--panel-in);}
+.btn-transport .t-label{font-family:var(--mono);font-size:9px;letter-spacing:.5px;font-weight:400;color:var(--win-darker);}
