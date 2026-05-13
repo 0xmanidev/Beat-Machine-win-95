@@ -162,7 +162,34 @@
           </div>
         </div>
 
+        <div class="side-panel">
+          <div class="scene-header">SCENE BANK</div>
+          <div class="preset-list" id="presetList">
+            <div class="preset-item active" data-preset="boomkit"><span class="preset-num">01</span>Boom Kit</div>
+            <div class="preset-item" data-preset="dustkit"><span class="preset-num">02</span>Dust Kit</div>
+            <div class="preset-item" data-preset="tapesoul"><span class="preset-num">03</span>Tape Soul</div>
+            <div class="preset-item" data-preset="midloop"><span class="preset-num">04</span>Midnight Loop</div>
+            <div class="preset-item" data-preset="vinylpack"><span class="preset-num">05</span>Vinyl Pack</div>
+            <div class="preset-item" data-preset="basement"><span class="preset-num">06</span>Basement Jazz</div>
+          </div>
+          <div style="display:flex;gap:2px;margin-top:2px;">
+            <button class="btn" style="flex:1;font-size:13px;" id="clearBtn">Clear</button>
+          </div>
 
+          <div class="viz-wrap" style="margin-top:4px;">
+            <canvas id="vizCanvas"></canvas>
+          </div>
+
+          <div class="beat-strip">
+            <div style="font-family:var(--mono);font-size:9px;font-weight:700;margin-bottom:3px;color:var(--win-darker);letter-spacing:.5px;">BEAT</div>
+            <div class="beat-leds">
+              <div class="beat-led" id="bl0"></div>
+              <div class="beat-led" id="bl1"></div>
+              <div class="beat-led" id="bl2"></div>
+              <div class="beat-led" id="bl3"></div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
