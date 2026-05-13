@@ -102,7 +102,69 @@
         </div>
       </div>
 
-      
+      <div class="main-area">
+
+        <div class="seq-panel">
+          <div class="seq-header">
+            <div class="led on" style="background:#f0a000;box-shadow:0 0 3px #f0a000;"></div>
+            STEP SEQUENCER
+            <span style="font-size:9px;font-weight:400;color:var(--win-darker);font-family:var(--mono);margin-left:4px;">16 STEPS / 4 BEAT GROUPS</span>
+          </div>
+          <div class="seq-body">
+            <div class="seq-track t-kick">
+              <div class="trk-info">
+                <div class="trk-pip" style="background:var(--kick);"></div>
+                <span class="trk-lbl">Kick</span>
+              </div>
+              <div class="steps" id="sg-kick"></div>
+              <input type="range" class="tvol" min="0" max="1" step="0.01" value="0.9" data-t="kick">
+            </div>
+            <div class="seq-track t-snare">
+              <div class="trk-info">
+                <div class="trk-pip" style="background:var(--snare);"></div>
+                <span class="trk-lbl">Snare</span>
+              </div>
+              <div class="steps" id="sg-snare"></div>
+              <input type="range" class="tvol" min="0" max="1" step="0.01" value="0.75" data-t="snare">
+            </div>
+            <div class="seq-track t-hihat">
+              <div class="trk-info">
+                <div class="trk-pip" style="background:var(--hihat);"></div>
+                <span class="trk-lbl">Hihat</span>
+              </div>
+              <div class="steps" id="sg-hihat"></div>
+              <input type="range" class="tvol" min="0" max="1" step="0.01" value="0.6" data-t="hihat">
+            </div>
+            <div class="seq-track t-perc">
+              <div class="trk-info">
+                <div class="trk-pip" style="background:var(--perc);"></div>
+                <span class="trk-lbl">Perc</span>
+              </div>
+              <div class="steps" id="sg-perc"></div>
+              <input type="range" class="tvol" min="0" max="1" step="0.01" value="0.5" data-t="perc">
+            </div>
+            <div class="seq-track t-bass">
+              <div class="trk-info">
+                <div class="trk-pip" style="background:var(--bass);"></div>
+                <span class="trk-lbl">Bass</span>
+              </div>
+              <div class="steps" id="sg-bass"></div>
+              <input type="range" class="tvol" min="0" max="1" step="0.01" value="0.7" data-t="bass">
+            </div>
+            <div class="seq-track t-chord">
+              <div class="trk-info">
+                <div class="trk-pip" style="background:var(--chord);"></div>
+                <span class="trk-lbl">Chord</span>
+              </div>
+              <div class="steps" id="sg-chord"></div>
+              <input type="range" class="tvol" min="0" max="1" step="0.01" value="0.55" data-t="chord">
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
 
       
 
