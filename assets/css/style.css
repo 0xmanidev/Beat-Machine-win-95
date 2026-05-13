@@ -420,3 +420,24 @@ input[type=range]::-moz-range-thumb{width:14px;height:22px;background:var(--win-
   font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.5px;
 }
 
+@media(max-width:860px){
+  .main-area{grid-template-columns:1fr;}
+  .side-panel{flex-direction:row;flex-wrap:wrap;}
+  .preset-list{max-height:120px;flex:1;}
+  .bottom-area{grid-template-columns:1fr 1fr;}
+  .transport-row{flex-wrap:wrap;gap:4px;}
+  .transport-sep{display:none;}
+}
+@media(max-width:560px){
+  .bottom-area{grid-template-columns:1fr 1fr;}
+  .steps{gap:3px;}
+  .beat-group{gap:1px;}
+  .seq-track{grid-template-columns:14px 1fr 18px;gap:4px;}
+  .trk-lbl{display:none;}
+  .bpm-digits{font-size:20px;}
+  .bpm-arrow[data-step="5"]{display:none;}
+}
+@media(max-width:400px){
+  .sl-val{display:none;}
+  .status-cluster{min-width:70px;}
+}
