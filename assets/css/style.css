@@ -54,5 +54,158 @@ html,body{
   overflow:hidden;
 }
 
+#taskbar{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  height:var(--taskbar-h);
+  background:var(--win-face);
+  box-shadow:inset 0 1px 0 var(--win-hi),inset 0 2px 0 var(--win-white);
+  display:flex;align-items:center;gap:2px;
+  padding:2px 4px;
+  z-index:9999;
+}
+
+.taskbar-start{
+  display:flex;align-items:center;gap:4px;
+  background:var(--win-face);
+  box-shadow:var(--bev-out2);
+  border:none;
+  padding:3px 8px 3px 6px;
+  font-family:var(--pixel);
+  font-size:7px;
+  font-weight:700;
+  color:var(--win-black);
+  cursor:pointer;
+  height:28px;
+  white-space:nowrap;
+  user-select:none;
+  letter-spacing:.5px;
+}
+.taskbar-start:active{box-shadow:var(--bev-in2);}
+.taskbar-start-icon{font-size:14px;line-height:1;}
+
+.taskbar-sep{
+  width:2px;height:28px;
+  background:var(--win-shadow);
+  margin:0 3px;
+  box-shadow:1px 0 0 var(--win-hi);
+  flex-shrink:0;
+}
+
+.taskbar-btn{
+  display:flex;align-items:center;gap:5px;
+  background:var(--win-face);
+  box-shadow:var(--bev-out2);
+  border:none;
+  padding:3px 8px;
+  font-family:var(--font);
+  font-size:14px;
+  color:var(--win-black);
+  cursor:pointer;
+  height:28px;
+  min-width:140px;
+  white-space:nowrap;
+  user-select:none;
+  text-align:left;
+}
+.taskbar-btn:hover{background:#ccc8c0;}
+.taskbar-btn:active{box-shadow:var(--bev-in2);}
+.taskbar-btn.active{box-shadow:var(--bev-in2);background:var(--panel-in);}
+.taskbar-btn-icon{font-size:12px;flex-shrink:0;}
+
+.taskbar-spacer{flex:1;}
+
+.taskbar-clock{
+  display:flex;align-items:center;
+  background:var(--inset-bg);
+  box-shadow:var(--bev-in);
+  padding:3px 8px;
+  font-family:var(--mono);
+  font-size:13px;
+  color:var(--win-black);
+  height:28px;
+  white-space:nowrap;
+  min-width:70px;
+  justify-content:center;
+}
+
+.app-window{
+  background:var(--win-face);
+  width:min(1100px,calc(100vw - 16px));
+  position:absolute;
+  top:8px;left:50%;
+  transform:translateX(-50%);
+  box-shadow:2px 2px 0 var(--win-white) inset,-2px -2px 0 var(--win-shadow) inset,4px 4px 12px rgba(0,0,0,.6);
+  user-select:none;
+  min-width:340px;
+}
+.app-window.dragging{opacity:.95;cursor:grabbing;}
+.app-window.minimized{display:none;}
+
+.titlebar{
+  background:linear-gradient(90deg,var(--win-blue) 0%,var(--win-blue2) 100%);
+  padding:3px 4px;
+  display:flex;align-items:center;gap:4px;
+  cursor:grab;
+}
+.titlebar:active{cursor:grabbing;}
+.title-icon{
+  width:16px;height:16px;
+  background:var(--win-face);
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;color:var(--win-blue);
+  flex-shrink:0;
+}
+.title-text{
+  color:#fff;
+  font-family:var(--pixel);
+  font-size:7px;
+  letter-spacing:.3px;
+  flex:1;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.title-btns{display:flex;gap:2px;}
+.tbtn{
+  width:16px;height:14px;
+  background:var(--win-face);
+  box-shadow:var(--bev-out);
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:700;color:var(--win-black);
+  cursor:pointer;flex-shrink:0;line-height:1;
+  font-family:'VT323',monospace;
+}
+.tbtn:active,.tbtn:hover{box-shadow:var(--bev-in);}
+
+.app-body{
+  padding:6px;
+  display:flex;flex-direction:column;gap:4px;
+}
+
+.panel{background:var(--win-face);box-shadow:var(--bev-in2);padding:2px;}
+.panel-inner{background:var(--win-face);padding:6px 8px;}
+.inset-field{
+  background:var(--inset-bg);
+  box-shadow:var(--bev-in2);
+  padding:3px 6px;
+  font-family:var(--mono);
+}
+
+.btn{
+  background:var(--win-face);
+  box-shadow:var(--bev-out2);
+  border:none;
+  font-family:var(--font);
+  font-size:14px;
+  color:var(--win-black);
+  cursor:pointer;
+  padding:3px 10px;
+  min-height:24px;
+  display:inline-flex;align-items:center;justify-content:center;gap:4px;
+  white-space:nowrap;user-select:none;
+}
+.btn:hover{background:#d0ccc4;}
+.btn:active,.btn.depressed{box-shadow:var(--bev-in2);padding:4px 9px 2px 11px;}
+.btn.active{box-shadow:var(--bev-in2);background:var(--panel-in);}
+
 
 
