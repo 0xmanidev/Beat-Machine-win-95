@@ -25,6 +25,87 @@
 
     <div class="app-body" id="appBody">
 
+      <div class="panel">
+        <div class="transport-row">
+
+          <div class="transport-cluster">
+            <button class="btn-transport" id="playBtn" aria-label="Play / Pause">
+              <span style="font-size:18px;" id="playIcon">▶</span>
+              <span class="t-label" id="playLabel">PLAY</span>
+            </button>
+          </div>
+
+          <div class="transport-sep"></div>
+
+          <div class="bpm-cluster">
+            <button class="bpm-arrow" id="bpmDown1" title="BPM -1">◀</button>
+            <div class="bpm-display" id="bpmDisplay" title="Scroll or drag to change BPM">
+              <div class="bpm-digits" id="bpmNum">85</div>
+              <div class="bpm-unit">BPM</div>
+            </div>
+            <button class="bpm-arrow" id="bpmUp1" title="BPM +1">▶</button>
+            <div style="display:flex;flex-direction:column;gap:2px;">
+              <button class="bpm-arrow" id="bpmUp5" data-step="5" title="BPM +5" style="font-family:var(--mono);font-size:9px;height:20px;width:26px;">+5</button>
+              <button class="bpm-arrow" id="bpmDown5" data-step="5" title="BPM -5" style="font-family:var(--mono);font-size:9px;height:20px;width:26px;">−5</button>
+            </div>
+          </div>
+
+          <div class="transport-sep"></div>
+
+          <div class="step-display">
+            <div class="step-digits" id="stepCounter">--</div>
+            <div class="step-unit">STEP</div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:3px;padding:0 4px;">
+            <div style="display:flex;gap:4px;">
+              <div class="led" id="tbl0"></div>
+              <div class="led" id="tbl1"></div>
+            </div>
+            <div style="display:flex;gap:4px;">
+              <div class="led" id="tbl2"></div>
+              <div class="led" id="tbl3"></div>
+            </div>
+          </div>
+
+          <div class="transport-sep"></div>
+
+          <div class="status-cluster">
+            <div class="led play" id="statusLed"></div>
+            <span class="status-text" id="statusTxt">STOPPED</span>
+          </div>
+
+          <div style="flex:1;min-width:8px;"></div>
+
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+            <div style="display:flex;flex-direction:column;gap:4px;min-width:110px;">
+              <div class="sl-row">
+                <span class="sl-label">Swing</span>
+                <input type="range" id="sSwing" min="0" max="100" step="1" value="0" style="width:70px;">
+                <span class="sl-val" id="sSwingV">0%</span>
+              </div>
+              <div class="sl-row">
+                <span class="sl-label">Vinyl</span>
+                <input type="range" id="sVinyl" min="0" max="100" step="1" value="30" style="width:70px;">
+                <span class="sl-val" id="sVinylV">30%</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:4px;min-width:110px;">
+              <div class="sl-row">
+                <span class="sl-label">Output</span>
+                <input type="range" id="sVol" min="0" max="100" step="1" value="75" style="width:70px;">
+                <span class="sl-val" id="sVolV">75%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+
+      
+
     </div>
   </div>
 
