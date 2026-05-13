@@ -1,0 +1,50 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --desk:#008080;
+  --win-bg:#c0c0c0;
+  --win-face:#d4d0c8;
+  --win-dark:#808080;
+  --win-darker:#404040;
+  --win-black:#000000;
+  --win-white:#ffffff;
+  --win-hi:#ffffff;
+  --win-shadow:#404040;
+  --win-blue:#000080;
+  --win-blue2:#1084d0;
+  --panel-in:#b8b4ac;
+  --panel-deep:#a8a49c;
+  --inset-bg:#a0a098;
+  --kick:#c45c20;
+  --snare:#3060a8;
+  --hihat:#8c7a14;
+  --perc:#6040a0;
+  --bass:#207858;
+  --chord:#a03060;
+  --led-off:#5a4a3a;
+  --led-on:#f0a000;
+  --led-play:#40c040;
+  --led-red:#d03020;
+  --font:'VT323','Share Tech Mono','Courier New',monospace;
+  --mono:'Share Tech Mono','Courier New',monospace;
+  --pixel:'Press Start 2P',monospace;
+  --bev-out:inset -1px -1px 0 var(--win-shadow),inset 1px 1px 0 var(--win-hi);
+  --bev-in:inset 1px 1px 0 var(--win-shadow),inset -1px -1px 0 var(--win-hi);
+  --bev-out2:inset -2px -2px 0 var(--win-darker),inset -1px -1px 0 var(--win-shadow),inset 2px 2px 0 var(--win-white),inset 1px 1px 0 var(--win-hi);
+  --bev-in2:inset 2px 2px 0 var(--win-darker),inset 1px 1px 0 var(--win-shadow),inset -2px -2px 0 var(--win-white),inset -1px -1px 0 var(--win-hi);
+  --taskbar-h:36px;
+}
+
+html,body{
+  height:100%;
+  background:var(--desk);
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px),
+    repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px);
+  font-family:var(--font);
+  font-size:14px;
+  color:var(--win-black);
+  overflow:hidden;
+}
+
+
