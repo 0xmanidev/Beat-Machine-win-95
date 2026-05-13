@@ -133,3 +133,15 @@ function updateVU(id, lit) {
     if (i < lit) s.classList.add('lit', i < 11 ? 'g' : i < 14 ? 'a' : 'r');
   });
 }
+
+let ctx = null, masterGain, filterNode, reverbNode, delayNode, distNode, analyserNode;
+let reverbGain, dryGain, delayGain, vinylGain = null;
+let isPlaying = false, currentStep = 0, schedulerTimer = null, nextNoteTime = 0;
+let bpm = 85, swingAmount = 0, vinylAmount = 0.3, masterVolume = 0.75;
+
+const STEPS  = 16;
+const tracks = ['kick','snare','hihat','perc','bass','chord'];
+const pattern = {};
+tracks.forEach(t => { pattern[t] = new Array(STEPS).fill(false); });
+const stepEls = {};
+tracks.forEach(t => { stepEls[t] = new Array(STEPS); });
