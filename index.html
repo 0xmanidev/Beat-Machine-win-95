@@ -193,7 +193,69 @@
 
       </div>
 
-      
+      <div class="bottom-area">
+
+        <div class="fx-module">
+          <div class="fx-header">FILTER</div>
+          <div class="fx-body">
+            <div class="fx-val-row">
+              <span class="fx-val-sub">Low-pass</span>
+              <span class="fx-val-num" id="fxLPV">4000 Hz</span>
+            </div>
+            <input type="range" id="fxLP" min="200" max="20000" step="100" value="4000" style="width:100%;margin-top:4px;">
+            <div class="vu-bar" id="vuLP" style="margin-top:4px;"></div>
+          </div>
+        </div>
+
+        <div class="fx-module">
+          <div class="fx-header">REVERB</div>
+          <div class="fx-body">
+            <div class="fx-val-row">
+              <span class="fx-val-sub">Room size</span>
+              <span class="fx-val-num" id="fxRVV">35%</span>
+            </div>
+            <input type="range" id="fxRV" min="0" max="100" step="1" value="35" style="width:100%;margin-top:4px;">
+            <div class="vu-bar" id="vuRV" style="margin-top:4px;"></div>
+          </div>
+        </div>
+
+        <div class="fx-module">
+          <div class="fx-header">DELAY</div>
+          <div class="fx-body">
+            <div class="fx-val-row">
+              <span class="fx-val-sub">Feedback</span>
+              <span class="fx-val-num" id="fxDLV">15%</span>
+            </div>
+            <input type="range" id="fxDL" min="0" max="100" step="1" value="15" style="width:100%;margin-top:4px;">
+            <div class="vu-bar" id="vuDL" style="margin-top:4px;"></div>
+          </div>
+        </div>
+
+        <div class="fx-module">
+          <div class="fx-header">SATURATION</div>
+          <div class="fx-body">
+            <div class="fx-val-row">
+              <span class="fx-val-sub">Drive</span>
+              <span class="fx-val-num" id="fxDRV">4×</span>
+            </div>
+            <input type="range" id="fxDR" min="1" max="40" step="1" value="4" style="width:100%;margin-top:4px;">
+            <div class="vu-bar" id="vuDR" style="margin-top:4px;"></div>
+          </div>
+        </div>
+
+        <div class="master-module">
+          <div class="master-header">MASTER OUTPUT</div>
+          <div class="master-body">
+            <div class="master-meter">
+              <div class="meter-label">L</div>
+              <div class="meter-bar"><div class="meter-fill" id="meterL"></div></div>
+              <div class="meter-label">R</div>
+              <div class="meter-bar"><div class="meter-fill" id="meterR"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </div>
