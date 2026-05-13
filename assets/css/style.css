@@ -315,3 +315,52 @@ input[type=range]::-moz-range-thumb{width:14px;height:22px;background:var(--win-
   -webkit-appearance:none;width:10px;height:16px;
   background:var(--win-face);box-shadow:var(--bev-out);border:none;cursor:grab;border-radius:0;
 }
+
+
+.main-area{
+  display:grid;grid-template-columns:1fr 180px;gap:4px;align-items:start;
+}
+
+.seq-panel{background:var(--win-face);box-shadow:var(--bev-in2);padding:2px;}
+.seq-header{
+  background:var(--panel-in);box-shadow:var(--bev-in);
+  padding:4px 8px;display:flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.5px;
+}
+.seq-body{padding:8px;}
+
+.seq-track{
+  display:grid;grid-template-columns:62px 1fr 28px;
+  align-items:center;gap:6px;padding:4px 0;
+}
+.seq-track+.seq-track{border-top:1px solid var(--win-shadow);}
+
+.trk-info{display:flex;align-items:center;gap:5px;}
+.trk-pip{width:10px;height:10px;border-radius:1px;box-shadow:var(--bev-out);flex-shrink:0;}
+.trk-lbl{font-family:var(--font);font-size:14px;font-weight:700;white-space:nowrap;}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;}
+.beat-group{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
+  padding:1px;background:var(--panel-in);box-shadow:var(--bev-in);
+}
+
+.step{
+  aspect-ratio:1/1;width:100%;
+  background:var(--win-face);box-shadow:var(--bev-out2);
+  cursor:pointer;position:relative;transition:none;border:none;
+}
+.step:hover{background:#d8d4cc;}
+.step:active{box-shadow:var(--bev-in2);}
+
+.t-kick  .step.on{background:var(--kick);box-shadow:inset 2px 2px 0 rgba(0,0,0,.3),inset -1px -1px 0 rgba(255,255,255,.2);}
+.t-snare .step.on{background:var(--snare);box-shadow:inset 2px 2px 0 rgba(0,0,0,.3),inset -1px -1px 0 rgba(255,255,255,.2);}
+.t-hihat .step.on{background:var(--hihat);box-shadow:inset 2px 2px 0 rgba(0,0,0,.3),inset -1px -1px 0 rgba(255,255,255,.2);}
+.t-perc  .step.on{background:var(--perc);box-shadow:inset 2px 2px 0 rgba(0,0,0,.3),inset -1px -1px 0 rgba(255,255,255,.2);}
+.t-bass  .step.on{background:var(--bass);box-shadow:inset 2px 2px 0 rgba(0,0,0,.3),inset -1px -1px 0 rgba(255,255,255,.2);}
+.t-chord .step.on{background:var(--chord);box-shadow:inset 2px 2px 0 rgba(0,0,0,.3),inset -1px -1px 0 rgba(255,255,255,.2);}
+
+/* playhead highlight */
+.step.now{outline:2px solid #f0e060;outline-offset:-2px;z-index:2;}
+.step.now::after{content:'';position:absolute;inset:0;background:rgba(240,224,96,.35);pointer-events:none;}
+
