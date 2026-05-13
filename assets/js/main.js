@@ -117,3 +117,19 @@ setInterval(updateClock, 10000);
     document.getElementById('maximizeBtn').click();
   });
 })();
+
+['vuLP','vuRV','vuDL','vuDR'].forEach(id => {
+  const el = document.getElementById(id);
+  for (let i = 0; i < 16; i++) {
+    const s = document.createElement('div');
+    s.className = 'vu-seg';
+    el.appendChild(s);
+  }
+});
+
+function updateVU(id, lit) {
+  document.querySelectorAll('#' + id + ' .vu-seg').forEach((s, i) => {
+    s.classList.remove('lit','g','a','r');
+    if (i < lit) s.classList.add('lit', i < 11 ? 'g' : i < 14 ? 'a' : 'r');
+  });
+}
